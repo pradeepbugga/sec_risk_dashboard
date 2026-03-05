@@ -1,0 +1,56 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.header-bar {
+    background-color: #1F3A5F;
+    color: white;
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.header-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.header-bar a:visited {
+    color: white;
+}
+
+.header-bar a:hover {
+    color: #dbe7f3;
+}
+
+.header-bar a:active {
+    color: #dbe7f3;
+}
+
+.tag {
+    background: #e6eef7;
+    color: #1F3A5F;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 12px;
+}

@@ -49,16 +49,16 @@ We chose an embedding model based on performance in downstream clustering (speci
 #### 9. Microclustering (Company-Specific)
 With our embeddings in hand, we next used HDBSCAN as an adaptive unsupervised clustering method on risk factor text across all years of a given company.  This allowed us to identify the "share" of each topic per year based on word count.  For every valid cluster (above a certain threshold of chunks), we also calculate a centroid to capture the average embedding of that topic.
 
-### 10. Macroclustering (Industry-Wide)
+#### 10. Macroclustering (Industry-Wide)
 To make cross-company observations, I next collect all the centroids from all the companies in step 9, then use agglomerative merging to generate 20 consensus risk buckets.  These represent the 20 most common risk factors across the industry (or at least the 8 companies we use). Now we can identify which risks are over-indexed per company and which risks are noticeably missing (useful for anomaly detection).
 
-### 11. Analytics
+#### 11. Analytics
 From our information on hand, we identify for each company the allocated risk share per year ("cluster weights"), the industry deviation (over-indexing or under-indexing of risk factors versus industry mean), and risk drift (how a company reallocates risk from previous year versus industry mean).  
 
-### 12. GenAI Executive Summary
+#### 12. GenAI Executive Summary
 Using GPT 5 Mini API, and a prompt including the top 2-3 values corresponding to the metrics in step 11 along with representative text, we generate an executive summary of risk narrative per year.  
 
-### 13. Dashboard
+#### 13. Dashboard
 Finally, we put this all together via Plotly / Dash (deployed on HuggingFace Spaces with Docker), showing a stacked area chart for risk allocation, and bar graphs for narrative drift / industry deviation.  Importantly, considering we originally kept the metadata of headings with our chunks, we allow users to click on a data point in our area chart and immediately see source text from the 10-K filing.  
 
 ### 14. Next Steps 

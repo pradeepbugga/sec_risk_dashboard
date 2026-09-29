@@ -1,0 +1,15 @@
+# Core pipeline: filing ingestion, extraction, chunking, embedding, clustering, dashboard.
+dash==4.0.0
+edgartools==5.15.3
+hdbscan==0.8.41
+lxml==6.0.2
+matplotlib==3.10.8
+numpy==2.4.2
+openai==2.24.0
+pandas==3.0.0
+plotly==6.6.0
+psycopg2==2.9.11
+pyarrow==23.0.0
+scikit-learn==1.8.0
+seaborn==0.13.2
+transformers==5.2.0

@@ -11,3 +11,9 @@ venv/
 env/
 .virtualenv/
 
+# pipeline/ writes large intermediate artifacts (raw filings, chunks,
+# embeddings) to a local data/ dir when run — keep those out of git.
+# tickers.csv is the one small input file, tracked deliberately.
+pipeline/data/*
+!pipeline/data/tickers.csv
+

@@ -1,0 +1,5 @@
+# Extra dependencies needed only to run the diagnostic/dev scripts in archive/.
+# Not required for the main pipeline (see ../requirements.txt).
+sentence-transformers==5.2.3
+torch==2.10.0
+umap-learn==0.5.11

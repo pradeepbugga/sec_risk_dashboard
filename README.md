@@ -61,6 +61,11 @@ Using GPT 5 Mini API, and a prompt including the top 2-3 values corresponding to
 #### 13. Dashboard
 Finally, we put this all together via Plotly / Dash (deployed on HuggingFace Spaces with Docker), showing a stacked area chart for risk allocation, and bar graphs for narrative drift / industry deviation.  Importantly, considering we originally kept the metadata of headings with our chunks, we allow users to click on a data point in our area chart and immediately see source text from the 10-K filing.  
 
+### Running the pipeline yourself
+
+The code for steps 1-12 above lives in [`pipeline/`](pipeline/README.md) in
+this repo. This app (steps 13-14) just reads the JSON that pipeline produces.
+
 ### 14. Next Steps 
 A simple validation of our approach is to enter the executive summary we generate into an LLM and ask for accuracy.  Importantly, we find that our summaries are surprisingly accurate and even identify cross-company insights that would be extremely difficult to identify based on structured data alone.  That being said, the next steps for commercially-relevant accuracy is 1) incorporating other sections (i.e. the MD&A comments), 2) incorporating other sources (i.e. 10-Q's, earnings calls, etc.), and 3) integrating structured data.     
 
